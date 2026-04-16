@@ -7,6 +7,7 @@ class Offpunk < Formula
   sha256 "57b067fa32d0206f4503a178d32229c162e452ea671250892367e100b6c9fe52"
   license "AGPL-3.0-or-later"
 
+  depends_on "rust" => :build
   depends_on "python@3.12"
   depends_on "libxml2"
   depends_on "libxslt"
