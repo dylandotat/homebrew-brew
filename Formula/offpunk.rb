@@ -7,8 +7,8 @@ class Offpunk < Formula
   sha256 "57b067fa32d0206f4503a178d32229c162e452ea671250892367e100b6c9fe52"
   license "AGPL-3.0-or-later"
 
-  depends_on "rust" => :build
   depends_on "python@3.12"
+  depends_on "cryptography"
   depends_on "libxml2"
   depends_on "libxslt"
   depends_on "chafa" => :recommended
@@ -22,11 +22,6 @@ class Offpunk < Formula
   resource "charset-normalizer" do
     url "https://files.pythonhosted.org/packages/source/c/charset-normalizer/charset_normalizer-3.4.1.tar.gz"
     sha256 "44251f18cd68a75b56585dd00dae26183e102cd5e0f9f1466e6df5da2ed64ea3"
-  end
-
-  resource "cryptography" do
-    url "https://files.pythonhosted.org/packages/source/c/cryptography/cryptography-43.0.3.tar.gz"
-    sha256 "315b9001266a492a6ff443b61238f956b214dbec9910a081ba5b6646a055a805"
   end
 
   resource "feedparser" do
@@ -57,16 +52,6 @@ class Offpunk < Formula
   resource "soupsieve" do
     url "https://files.pythonhosted.org/packages/source/s/soupsieve/soupsieve-2.6.tar.gz"
     sha256 "e2e68417777af359ec65daac1057404a3c8a5455bb8abc36f1a9866ab1a51abb"
-  end
-
-  resource "cffi" do
-    url "https://files.pythonhosted.org/packages/source/c/cffi/cffi-1.17.1.tar.gz"
-    sha256 "1c39c6016c32bc48dd54561950ebd6836e1670f2ae46128f67cf49e789c52824"
-  end
-
-  resource "pycparser" do
-    url "https://files.pythonhosted.org/packages/source/p/pycparser/pycparser-2.22.tar.gz"
-    sha256 "491c8be9c040f5390f5bf44a5b07752bd07f56edf992381b05c701439eec10f6"
   end
 
   def install
